@@ -9,26 +9,9 @@ that I use throughout my own financial analytics scripts::
 
     import jarmath
 
-Paragraphs are separated by blank lines. *Italics*, **bold**,
-and ``monospace`` look like this.
+To use a function:
+    
+    e.g. average_price = jarmath.moving_average(price, window)
 
 
-
-=========
-
-Lists look like this:
-
-* First
-
-* Second. Can be multiple lines
-  but must be indented properly.
-
-  A Sub-Section
-  -------------
-
-  Numbered lists look like you'd expect:
-
-  1. hi there
-
-  2. must be going
 
