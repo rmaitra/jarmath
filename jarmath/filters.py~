@@ -1,0 +1,52 @@
+""" Written by Raj Maitra
+
+    Filters Module for JarMath Package.
+
+
+
+"""
+from math import *
+from numpy import *
+
+def moving_average(price,N):
+    """ This function uses a moving average function to smoothen the price history.
+
+    Arguments:
+        price: This is the raw historical prices to be smoothened.
+        N: This is the size of the moving average filter.
+    
+    Returns:
+        price_ave: This is the smoothened price signal.
+
+    """
+    window = ones(int(N))/float(N)
+    price_ave = convolve(price,window,'same')
+    return price_ave
+
+def kalman_filter_1d(price, price_hat, R_var, q_var):
+	""" kalman smoother
+	
+	"""	
+	P_var = 1
+	price_estimate = price[0]
+	price_hat = []
+
+	for x in price:
+		price_estimate, P_var = kfilt(x, price_estimate, P_var, R_var, q_var)
+		price_hat.append(price_estimate)
+
+	return price_hat
+
+def kfilt(z, x, P_var, R_var, q_var):
+	mu = math.log(1.05)/365
+
+	residual = z - x
+	K_gain = float(P_var/(P_var+R_var))
+	
+	x = x + K_gain*residual
+	P_var = (1 - K_gain)*P_var
+	P_var = P_var+q_var
+	
+	x = x+mu*z
+	return x, P_var
+

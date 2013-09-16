@@ -1,0 +1,10 @@
+README
+setup.py
+jarmath/__init__.py
+jarmath/filters.py
+jarmath/stats.py
+jarmath.egg-info/PKG-INFO
+jarmath.egg-info/SOURCES.txt
+jarmath.egg-info/dependency_links.txt
+jarmath.egg-info/not-zip-safe
+jarmath.egg-info/top_level.txt

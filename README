@@ -1,0 +1,34 @@
+===========
+JarMath
+===========
+
+JarMath is a personal package I threw together that contains all of my statistical and filtering functions
+that I use throughout my own financial analytics scripts::
+
+    #!/usr/bin/env python
+
+    import jarmath
+
+Paragraphs are separated by blank lines. *Italics*, **bold**,
+and ``monospace`` look like this.
+
+
+
+=========
+
+Lists look like this:
+
+* First
+
+* Second. Can be multiple lines
+  but must be indented properly.
+
+  A Sub-Section
+  -------------
+
+  Numbered lists look like you'd expect:
+
+  1. hi there
+
+  2. must be going
+
